@@ -1,0 +1,171 @@
+ ****** HSPICE  --  A-2007.09  32-BIT    (Aug 28 2007) 22:30:04 06/14/2020 winnt
+  Copyright (C) 2007 Synopsys, Inc. All Rights Reserved.                        
+  Unpublished-rights reserved under US copyright laws.
+  This program is protected by law and is subject to the 
+  terms and conditions of the license agreement found in:
+    C:\synopsys\Hspice_A-2007.09\license.txt
+  Use of this program is your acceptance to be bound by this 
+  license agreement. HSPICE is the trademark of Synopsys, Inc.
+  Input File: C:\Users\hasee\Documents\MATLAB\FIC\OTA\current_density_scan.sp   
+  lic:  
+  lic: FLEXlm: v8.5b 
+  lic: USER:   hasee                HOSTNAME: DESKTOP-JQEVVA5 
+  lic: HOSTID: "80fa5b36e76b 00fff6b359de 84ef1851ab84 84ef1851ab80 84ef1851ab81
+  
+  lic: Using FLEXlm license file: 
+  lic: C:\synopsys\hspice_2007-09.lic 
+  lic: Checkout 1 hspice;  Encryption code: AD47C1C891DA5D596A45 
+  lic: License/Maintenance for hspice will expire on 31-dec-2020/2007.9 
+  lic: NODE LOCKED license on hostid "80fa5b36e76b 00fff6b359de 84ef1851ab84 84e
+ f
+  lic:   
+ Init: read install configuration file: C:\synopsys\Hspice_A-2007.09\meta.cfg
+ Init: hspice initialization file: C:\synopsys\Hspice_A-2007.09\hspice.ini
+
+
+
+
+ $ zhang zhishuai, april 2020 
+
+
+ *  *  *  *  *  *  *  *  *  * define parameters *  *  *  *  *  *  *  *  *  * 
+ .param vdd = 3v 
+ +wid1 = 10um 
+ +wid2 = 10um 
+
+ *  *  *  *  *  *  *  *  *  * define stimulii *  *  *  *  *  *  *  *  *  * 
+ vd avdd 0 dc = vdd 
+ vgn gn 0 dc = gs'
+ vgp gp 0 dc = 'vdd - gs'
+
+
+ *  *  *  *  *  *  *  *  *  * define main circuit *  *  *  *  *  *  *  *  *  * 
+ mn1 avdd gn 0 0 nch214 l w = wid1 
+ mp1 0 gp avdd avdd pch214 l w = wid2 
+
+
+ *  *  *  *  *  *  *  *  *  * analysis options *  *  *  *  *  *  *  *  *  * 
+ .op
+ .dc gs 0.4v 1.4v 5mv l 0.35um 0.80um 0.05um 
+
+ .probe gm_id_n = par('gmo(mn1)/i(mn1)') 
+ .probe gm_id_p = par('gmo(mp1)/i(mp1)') 
+ .probe id_w_n = par('i(mn1)/wid1') 
+ .probe id_w_p = par('i(mp1)/wid2') 
+ .probe ft_n = par('1/2/3.14159*gmo(mn1)/(-cgsbo(mn1))') 
+ .probe ft_p = par('1/2/3.14159*gmo(mp1)/(-cgsbo(mp1))') 
+
+ .probe ov_n = par('gs-vth(mn1)') 
+ .probe ov_p = par('vdd-gs-vth(mp1)') 
+ .probe l 
+ **warning**  could not identify variable type l       
+
+ **warning**  unrecognized output variable=         on above line
+
+
+ *  *  *  *  *  *  *  *  *  * options and libraries *  *  *  *  *  *  *  *  *  * 
+ .options post brief dccap 
+ 
+
+
+          ***** job concluded
+
+          ***** job concluded
+
+          ***** job concluded
+
+          ***** job concluded
+
+          ***** job concluded
+
+          ***** job concluded
+
+          ***** job concluded
+
+          ***** job concluded
+
+          ***** job concluded
+ 
+ ****** HSPICE  --  A-2007.09  32-BIT    (Aug 28 2007) 22:30:04 06/14/2020 winnt
+ ******  
+ $ id / w scan vs. gm / id                                                      
+  ******  operating point information      tnom=  25.000 temp=  25.000          
+ ******  
+ ***** operating point status is all       simulation time is     0.     
+    node    =voltage      node    =voltage      node    =voltage
+
+ +0:avdd    =   3.0000  0:gn      = 400.0000m 0:gp      =   2.6000 
+
+
+ ****  voltage sources
+
+ subckt                                   
+ element  0:vd       0:vgn      0:vgp     
+  volts      3.0000   400.0000m    2.6000 
+  current   -1.0010u    0.         0.     
+  power      3.0031u    0.         0.     
+
+     total voltage source power dissipation=    3.0031u       watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                        
+ element  0:mn1      0:mp1     
+ model    0:nch214   0:pch214  
+ region       Cutoff     Cutoff
+  id       251.0744n -749.9474n
+  ibs        0.         0.     
+  ibd        0.         0.     
+  vgs      400.0000m -400.0000m
+  vds        3.0000    -3.0000 
+  vbs        0.         0.     
+  vth      546.5518m -536.4539m
+  vdsat     39.2753m  -52.0436m
+  vod     -146.5518m  136.4539m
+  beta       6.7176m    2.6025m
+  gam eff  894.1238m  472.5709m
+  gm         5.9954u   15.2544u
+  gds      174.2363n  668.6270n
+  gmb        1.5068u    3.3384u
+  cdtot     11.5651f   15.5415f
+  cgtot      9.6843f   11.8955f
+  cstot     21.9808f   26.6614f
+  cbtot     33.8538f   34.7480f
+  cgs        1.9341f    4.9424f
+  cgd        2.3516f    4.6763f
+
+
+
+
+          ***** job concluded
+ ****** HSPICE  --  A-2007.09  32-BIT    (Aug 28 2007) 22:30:04 06/14/2020 winnt
+ ******  
+ $ id / w scan vs. gm / id                                                      
+  ******  job statistics summary           tnom=  25.000 temp=  25.000          
+ ******  
+
+           total memory used        161 kbytes
+
+  # nodes =       6 # elements=       7
+  # diodes=       0 # bjts    =       0 # jfets   =       0 # mosfets =       2
+  # va device =       0
+
+    analysis           time    # points   tot. iter  conv.iter
+
+    op point           0.01           1           3
+    dc sweep           0.11        2010        4030
+    readin             0.01
+    errchk             0.00
+    setup              0.00
+    output             0.00
+           total cpu time          0.20 seconds
+               job started at  22:30:04 06/14/2020
+               job ended   at  22:30:04 06/14/2020
+
+
+ Init: hspice initialization file: C:\synopsys\Hspice_A-2007.09\hspice.ini
+  lic: Release hspice token(s) 

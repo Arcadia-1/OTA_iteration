@@ -1,4 +1,4 @@
- ****** HSPICE  --  A-2007.09  32-BIT    (Aug 28 2007) 22:30:04 06/14/2020 winnt
+ ****** HSPICE  --  A-2007.09  32-BIT    (Aug 28 2007) 13:13:33 06/15/2020 winnt
   Copyright (C) 2007 Synopsys, Inc. All Rights Reserved.                        
   Unpublished-rights reserved under US copyright laws.
   This program is protected by law and is subject to the 
@@ -46,7 +46,7 @@
 
  *  *  *  *  *  *  *  *  *  * analysis options *  *  *  *  *  *  *  *  *  * 
  .op
- .dc gs 0.4v 1.4v 5mv l 0.35um 0.80um 0.05um 
+ .dc gs 0.4v 2.8v 5mv l 0.35um 0.80um 0.05um 
 
  .probe gm_id_n = par('gmo(mn1)/i(mn1)') 
  .probe gm_id_p = par('gmo(mp1)/i(mp1)') 
@@ -86,7 +86,7 @@
 
           ***** job concluded
  
- ****** HSPICE  --  A-2007.09  32-BIT    (Aug 28 2007) 22:30:04 06/14/2020 winnt
+ ****** HSPICE  --  A-2007.09  32-BIT    (Aug 28 2007) 13:13:33 06/15/2020 winnt
  ******  
  $ id / w scan vs. gm / id                                                      
   ******  operating point information      tnom=  25.000 temp=  25.000          
@@ -142,13 +142,13 @@
 
 
           ***** job concluded
- ****** HSPICE  --  A-2007.09  32-BIT    (Aug 28 2007) 22:30:04 06/14/2020 winnt
+ ****** HSPICE  --  A-2007.09  32-BIT    (Aug 28 2007) 13:13:33 06/15/2020 winnt
  ******  
  $ id / w scan vs. gm / id                                                      
   ******  job statistics summary           tnom=  25.000 temp=  25.000          
  ******  
 
-           total memory used        161 kbytes
+           total memory used        166 kbytes
 
   # nodes =       6 # elements=       7
   # diodes=       0 # bjts    =       0 # jfets   =       0 # mosfets =       2
@@ -157,14 +157,14 @@
     analysis           time    # points   tot. iter  conv.iter
 
     op point           0.01           1           3
-    dc sweep           0.11        2010        4030
+    dc sweep           0.27        4810        9630
     readin             0.01
     errchk             0.00
     setup              0.00
     output             0.00
-           total cpu time          0.20 seconds
-               job started at  22:30:04 06/14/2020
-               job ended   at  22:30:04 06/14/2020
+           total cpu time          0.37 seconds
+               job started at  13:13:33 06/15/2020
+               job ended   at  13:13:33 06/15/2020
 
 
  Init: hspice initialization file: C:\synopsys\Hspice_A-2007.09\hspice.ini

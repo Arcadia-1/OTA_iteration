@@ -13,9 +13,9 @@ gmidn = evalsig(m, 'gm_id_n');
 idwn = evalsig(m, 'id_w_n');
 
 ovp = evalsig(m, 'ov_p');
-ftp = evalsig(m, 'ft_p');
-gmidp = -evalsig(m, 'gm_id_p');
-idwp = -evalsig(m, 'id_w_p');
+ftp = flipud(evalsig(m, 'ft_p'));
+gmidp = -flipud(evalsig(m, 'gm_id_p'));
+idwp = -flipud(evalsig(m, 'id_w_p'));
 
 L = evalsig(m, 'sw_l');
 

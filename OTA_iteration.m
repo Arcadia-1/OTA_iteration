@@ -15,8 +15,6 @@ load('ftp.mat');
 
 [Itot, Id1, Id2, W1, W2, W3, W4] = Itot_ota2stg(0.5, 0.5, 0.5, 0.5)
 
-
-
 %%
 function [Itot, Id1, Id2, W1, W2, W3, W4] = Itot_ota2stg(kc1, kc2, g31, g42)
 

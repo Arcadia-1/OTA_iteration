@@ -1,4 +1,4 @@
-***** HSPICE  --  A-2007.09  32-BIT    (Aug 28 2007) 22:30:04 06/14/2020 winnt
+***** HSPICE  --  A-2007.09  32-BIT    (Aug 28 2007) 13:13:33 06/15/2020 winnt
  Input File: C:\Users\hasee\Documents\MATLAB\FIC\OTA\current_density_scan.sp
  lic:
  lic: FLEXlm: v8.5b
@@ -11,60 +11,60 @@
  lic: NODE LOCKED license on hostid "80fa5b36e76b 00fff6b359de 84ef1851ab84 84ef
  lic:
  Init: hspice initialization file: C:\synopsys\Hspice_A-2007.09\hspice.ini
- init: begin read circuit files,  cpu clock=  3.50E-02
+ init: begin read circuit files,  cpu clock=  3.60E-02
        option post
        option brief
- init: end read circuit files,  cpu clock=  3.90E-02 memory=    145 kb
- init: begin check errors,  cpu clock=  3.90E-02
- init: end check errors,  cpu clock=  4.10E-02 memory=    149 kb
- init: begin setup matrix, pivot=    10 cpu clock=  4.10E-02
-       establish matrix -- done,  cpu clock=  4.30E-02 memory=    150 kb
-       re-order matrix -- done,  cpu clock=  4.40E-02 memory=    150 kb
- init: end setup matrix,  cpu clock=  4.50E-02 memory=    161 kb
+ init: end read circuit files,  cpu clock=  4.00E-02 memory=    145 kb
+ init: begin check errors,  cpu clock=  4.00E-02
+ init: end check errors,  cpu clock=  4.20E-02 memory=    154 kb
+ init: begin setup matrix, pivot=    10 cpu clock=  4.20E-02
+       establish matrix -- done,  cpu clock=  4.60E-02 memory=    155 kb
+       re-order matrix -- done,  cpu clock=  4.60E-02 memory=    155 kb
+ init: end setup matrix,  cpu clock=  4.70E-02 memory=    166 kb
  sweep: parameter       parameter1       begin, #sweeps =  10
  parameter: l               =    3.50E-07
  output: C:\Users\hasee\Documents\MATLAB\FIC\OTA\current_density_scan\current_de
- sweep: dc dc1    begin, #sweeps= 201 cpu clock=  5.40E-02
- sweep: dc dc1    end,  cpu clock=  6.20E-02 memory=    161 kb
+ sweep: dc dc1    begin, #sweeps= 481 cpu clock=  6.10E-02
+ sweep: dc dc1    end,  cpu clock=  8.40E-02 memory=    166 kb
  parameter: l               =    4.00E-07
  output: C:\Users\hasee\Documents\MATLAB\FIC\OTA\current_density_scan\current_de
- sweep: dc dc2    begin, #sweeps= 201 cpu clock=  7.00E-02
- sweep: dc dc2    end,  cpu clock=  7.90E-02 memory=    161 kb
+ sweep: dc dc2    begin, #sweeps= 481 cpu clock=  9.30E-02
+ sweep: dc dc2    end,  cpu clock=  1.20E-01 memory=    166 kb
  parameter: l               =    4.50E-07
  output: C:\Users\hasee\Documents\MATLAB\FIC\OTA\current_density_scan\current_de
- sweep: dc dc3    begin, #sweeps= 201 cpu clock=  8.60E-02
- sweep: dc dc3    end,  cpu clock=  9.60E-02 memory=    161 kb
+ sweep: dc dc3    begin, #sweeps= 481 cpu clock=  1.29E-01
+ sweep: dc dc3    end,  cpu clock=  1.58E-01 memory=    166 kb
  parameter: l               =    5.00E-07
  output: C:\Users\hasee\Documents\MATLAB\FIC\OTA\current_density_scan\current_de
- sweep: dc dc4    begin, #sweeps= 201 cpu clock=  1.04E-01
- sweep: dc dc4    end,  cpu clock=  1.13E-01 memory=    161 kb
+ sweep: dc dc4    begin, #sweeps= 481 cpu clock=  1.68E-01
+ sweep: dc dc4    end,  cpu clock=  1.96E-01 memory=    166 kb
  parameter: l               =    5.50E-07
  output: C:\Users\hasee\Documents\MATLAB\FIC\OTA\current_density_scan\current_de
- sweep: dc dc5    begin, #sweeps= 201 cpu clock=  1.21E-01
- sweep: dc dc5    end,  cpu clock=  1.30E-01 memory=    161 kb
+ sweep: dc dc5    begin, #sweeps= 481 cpu clock=  2.06E-01
+ sweep: dc dc5    end,  cpu clock=  2.34E-01 memory=    166 kb
  parameter: l               =    6.00E-07
  output: C:\Users\hasee\Documents\MATLAB\FIC\OTA\current_density_scan\current_de
- sweep: dc dc6    begin, #sweeps= 201 cpu clock=  1.37E-01
- sweep: dc dc6    end,  cpu clock=  1.46E-01 memory=    161 kb
+ sweep: dc dc6    begin, #sweeps= 481 cpu clock=  2.44E-01
+ sweep: dc dc6    end,  cpu clock=  2.70E-01 memory=    166 kb
  parameter: l               =    6.50E-07
  output: C:\Users\hasee\Documents\MATLAB\FIC\OTA\current_density_scan\current_de
- sweep: dc dc7    begin, #sweeps= 201 cpu clock=  1.54E-01
- sweep: dc dc7    end,  cpu clock=  1.63E-01 memory=    161 kb
+ sweep: dc dc7    begin, #sweeps= 481 cpu clock=  2.77E-01
+ sweep: dc dc7    end,  cpu clock=  3.00E-01 memory=    166 kb
  parameter: l               =    7.00E-07
  output: C:\Users\hasee\Documents\MATLAB\FIC\OTA\current_density_scan\current_de
- sweep: dc dc8    begin, #sweeps= 201 cpu clock=  1.70E-01
- sweep: dc dc8    end,  cpu clock=  1.79E-01 memory=    161 kb
+ sweep: dc dc8    begin, #sweeps= 481 cpu clock=  3.09E-01
+ sweep: dc dc8    end,  cpu clock=  3.29E-01 memory=    166 kb
  parameter: l               =    7.50E-07
  output: C:\Users\hasee\Documents\MATLAB\FIC\OTA\current_density_scan\current_de
- sweep: dc dc9    begin, #sweeps= 201 cpu clock=  1.86E-01
- sweep: dc dc9    end,  cpu clock=  1.94E-01 memory=    161 kb
+ sweep: dc dc9    begin, #sweeps= 481 cpu clock=  3.38E-01
+ sweep: dc dc9    end,  cpu clock=  3.61E-01 memory=    166 kb
  parameter: l               =    8.00E-07
  output: C:\Users\hasee\Documents\MATLAB\FIC\OTA\current_density_scan\current_de
- sweep: dc dc10   begin, #sweeps= 201 cpu clock=  2.02E-01
- sweep: dc dc10   end,  cpu clock=  2.11E-01 memory=    161 kb
+ sweep: dc dc10   begin, #sweeps= 481 cpu clock=  3.69E-01
+ sweep: dc dc10   end,  cpu clock=  3.88E-01 memory=    166 kb
  sweep: parameter       parameter       1 end
- dcop: begin dcop,  cpu clock=  2.22E-01
- dcop: end dcop,  cpu clock=  2.28E-01 memory=    161 kb  tot_iter=       3
+ dcop: begin dcop,  cpu clock=  3.97E-01
+ dcop: end dcop,  cpu clock=  4.02E-01 memory=    166 kb  tot_iter=       3
 >info:         ***** hspice job concluded
  Init: hspice initialization file: C:\synopsys\Hspice_A-2007.09\hspice.ini
  lic: Release hspice token(s)

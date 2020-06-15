@@ -1,7 +1,7 @@
 * "simulator" "HSPICE" 
 * "version" "A-2007.09"
 * "format" "HSP"
-* "rundate" "22:30:04 06/14/2020 "
+* "rundate" "13:13:33 06/15/2020 "
 * "netlist" "C:\Users\hasee\Documents\MATLAB\FIC\OTA\current_density_scan.sp "
 * "runtitle" "$ id / w scan vs. gm / id"
 * time =    0.            

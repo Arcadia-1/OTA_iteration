@@ -20,7 +20,7 @@ mp1 0 gp avdd avdd pch214 L W = Wid2
 
 *  *  *  *  *  *  *  *  *  * analysis options *  *  *  *  *  *  *  *  *  * 
 .op
-.dc gs 0.4V 1.4V 5mV L 0.35um 0.80um 0.05um 
+.dc gs 0.4V 2.8V 5mV L 0.35um 0.80um 0.05um 
 
 .probe gm_id_n = par('gmo(mn1)/i(mn1)') 
 .probe gm_id_p = par('gmo(mp1)/i(mp1)') 
